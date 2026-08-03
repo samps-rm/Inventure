@@ -1,0 +1,92 @@
+.badges{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:40px;
+
+    padding:55px 0;
+}
+
+.badge{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:black;
+
+    color:white;
+
+    border-radius:50px;
+
+    padding:16px 40px;
+
+    transition:.35s ease;
+}
+
+.badge:hover{
+
+    background:#52057B;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 6px 18px #DFB1FE;
+
+    cursor:pointer;
+}
+
+.badge svg{
+
+    font-size:40px;
+
+    color:#C98FFF;
+
+    transition:.35s ease;
+}
+
+.badge:hover svg{
+
+    transform:scale(1.12);
+
+    color:white;
+}
+
+.badge svg{
+
+    font-size:40px;
+
+    color:#C98FFF;
+}
+
+.badge h3{
+
+    font-family:"Roboto";
+
+    font-size:20px;
+
+    font-weight:700;
+}
+
+.badge p{
+
+    font-family:"Roboto";
+
+    font-size:15px;
+
+    color:#DDDDDD;
+}
+
+.divider{
+
+    width:1px;
+
+    height:65px;
+
+    background:#444;
+}

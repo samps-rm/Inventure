@@ -1,0 +1,317 @@
+/* ==========================
+            SHOP
+============================= */
+
+.shop{
+
+    width:100%;
+
+    padding:70px 0 90px;
+
+    background:#fff;
+}
+
+/* ==========================
+        CONTAINER
+============================= */
+
+.shop-container{
+
+    width:1280px;
+
+    margin:auto;
+}
+
+/* ==========================
+            TITLE
+============================= */
+
+.shop-title{
+
+    font-family:"Bangers", cursive;
+
+    font-size:56px;
+
+    color:#52057B;
+
+    letter-spacing:2px;
+
+    margin-bottom:40px;
+}
+
+/* ==========================
+            GRID
+============================= */
+
+.shop-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+}
+
+/* ==========================
+            CARD
+============================= */
+
+.shop-card{
+
+    position:relative;
+
+    background:#F4F4F4;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:
+    transform .35s,
+    box-shadow .35s;
+}
+
+.shop-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 40px rgba(82,5,123,.20);
+}
+
+/* ==========================
+        DISCOUNT BADGE
+============================= */
+
+.discount{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    background:#FF2B2B;
+
+    color:white;
+
+    font-family:"Roboto";
+
+    font-size:16px;
+
+    font-weight:700;
+
+    padding:8px 14px;
+
+    border-radius:50px;
+
+    z-index:10;
+
+    transition:.35s;
+}
+
+.shop-card:hover .discount{
+
+    transform:scale(1.1);
+}
+
+/* ==========================
+            IMAGE
+============================= */
+
+.image-box{
+
+    width:100%;
+
+    height:270px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+}
+
+.image-box img{
+
+    width:220px;
+
+    height:220px;
+
+    object-fit:contain;
+
+    transform:scale(1.08);
+
+    transition:transform .45s ease;
+}
+
+/* Zoom Out */
+
+.shop-card:hover .image-box img{
+
+    transform:scale(1);
+}
+
+/* ==========================
+            CONTENT
+============================= */
+
+.content{
+
+    padding:18px 22px 22px;
+}
+
+/* ==========================
+        PRODUCT NAME
+============================= */
+
+.product-name{
+
+    font-family:"Roboto";
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#111;
+
+    line-height:28px;
+
+    margin-bottom:12px;
+
+    min-height:56px;
+}
+
+/* ==========================
+            PRICE
+============================= */
+
+.price{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:12px;
+}
+
+.current{
+
+    font-family:"Roboto";
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#111;
+}
+
+.old{
+
+    font-family:"Roboto";
+
+    font-size:16px;
+
+    color:#8B8B8B;
+
+    text-decoration:line-through;
+}
+
+/* ==========================
+            STARS
+============================= */
+
+.stars{
+
+    display:flex;
+
+    gap:3px;
+
+    color:#892CDC;
+
+    margin-bottom:22px;
+}
+
+.stars svg{
+
+    font-size:20px;
+}
+
+/* ==========================
+            BUTTON
+============================= */
+
+.cart-btn{
+
+    width:100%;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#52057B;
+
+    color:white;
+
+    font-family:"Roboto";
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+.cart-btn:hover{
+
+    background:#6E18A6;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(82,5,123,.35);
+}
+
+.cart-btn:active{
+
+    transform:scale(.97);
+}
+
+/* ==========================
+        RESPONSIVE
+============================= */
+
+@media(max-width:1300px){
+
+    .shop-container{
+
+        width:95%;
+    }
+
+}
+
+@media(max-width:1100px){
+
+    .shop-grid{
+
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:650px){
+
+    .shop-grid{
+
+        grid-template-columns:1fr;
+    }
+
+}
