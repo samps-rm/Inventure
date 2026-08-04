@@ -170,6 +170,12 @@
 
 .product-name{
 
+    width:100%;
+
+    min-height:56px;
+
+    text-align:center;
+
     font-family:"Roboto";
 
     font-size:20px;
@@ -182,7 +188,11 @@
 
     margin-bottom:12px;
 
-    min-height:56px;
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
 }
 
 /* ==========================

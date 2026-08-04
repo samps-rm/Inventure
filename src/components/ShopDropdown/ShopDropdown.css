@@ -1,0 +1,86 @@
+.shop-dropdown{
+
+    position:absolute;
+
+    top:51px;
+
+    left:-50px;
+
+    width:760px;
+
+    background:black;
+
+    border-radius:0 0 28px 28px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:22px;
+
+    padding:22px 28px;
+
+    border:2px solid #B86FFF;
+
+    border-top:none;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
+
+    z-index:999;
+
+    animation:dropdown .25s ease;
+}
+
+
+
+.dropdown-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.dropdown-item img{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:contain;
+
+    background:white;
+
+    padding:10px;
+}
+
+.dropdown-item p{
+
+    margin-top:10px;
+
+    color:white;
+
+    font-family:"Roboto";
+
+    font-size:18px;
+}
+
+.dropdown-item:hover{
+
+    transform:translateY(-6px);
+}
+
+.dropdown-item:hover img{
+
+    transform:scale(.95);
+}
+
+.dropdown-item img{
+
+    transition:.3s;
+}

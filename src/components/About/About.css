@@ -26,27 +26,27 @@
 .about h1{
 
     font-family:"Bangers";
-
+    align-items:center;
     font-size:40px;
 
     color:#52057B;
 
-    letter-spacing:1px;
+    letter-spacing:2px;
 
-    margin-bottom:10px;
+    margin-bottom:15px;
+    margin-top:10px;
 
     font-weight:400;
 }
 
 .about p{
-
+    align-items:center;
     font-family:"Roboto";
-    letter-spacing:1px;
+    letter-spacing:0.5px;
     font-size:16px;
-
-    font-weight:400;
-
-    line-height:18px;
+    margin-bottom:4px;
+    font-weight:450;
+    line-height:20px;
     
     color:#1E1E1E;
 }
