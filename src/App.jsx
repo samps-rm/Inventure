@@ -1,27 +1,15 @@
-import Navbar from "./components/Navbar/Navbar";
-import HeroSlider from "./components/HeroSlider/HeroSlider";
-import About from "./components/About/About";
-import Badges from "./components/Badges/Badges";
-import BestSellers from "./components/BestSellers/BestSellers";
-import Shop from "./components/Shop/Shop";
-import FindStore from "./components/FindStore/FindStore";
-import Footer from "./components/Footer/Footer";
+import { Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Offers from "./pages/Offers";
 
 function App() {
-
   return (
-    <>
-      <Navbar />
-      <HeroSlider />
-      <About />
-      <Badges />
-      <BestSellers />
-      <Shop />
-      <FindStore />
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/offers" element={<Offers />} />
+    </Routes>
   );
-
 }
 
 export default App;

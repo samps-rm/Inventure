@@ -1,6 +1,7 @@
+import { useState } from "react";
 import "./Shop.css";
 
-import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+import { FaStar, FaStarHalfAlt, FaRegStar, FaCheckCircle } from "react-icons/fa";
 
 import airpods4 from "../../assets/shop/airpods4.png";
 import airpodsmax from "../../assets/shop/airpodsmax.png";
@@ -11,7 +12,17 @@ import mic from "../../assets/shop/mic.png";
 import dock from "../../assets/shop/dock.png";
 import camera from "../../assets/shop/camera.png";
 
-function Shop() {
+function Shop({ offersOnly = false, title = "SHOP" }) {
+
+    const [showNotification, setShowNotification] = useState(false);
+
+    const handleAddToCart = () => {
+        setShowNotification(true);
+
+        setTimeout(() => {
+            setShowNotification(false);
+        }, 2000);
+    };
 
     const products = [
 
@@ -97,17 +108,28 @@ function Shop() {
 
     ];
 
+    const displayedProducts = offersOnly
+        ? products.filter(product => product.discount !== "")
+        : products;
+
     return (
 
         <section className="shop">
 
             <div className="shop-container">
 
-                <h2 className="shop-title">SHOP</h2>
+                <h2 className="shop-title">{title}</h2>
+
+                {showNotification && (
+                    <div className="cart-notification">
+                        <FaCheckCircle />
+                        <span>Added successfully</span>
+                    </div>
+                )}
 
                 <div className="shop-grid">
 
-                    {products.map((product) => (
+                    {displayedProducts.map((product) => (
 
                         <div
                             className="shop-card"
@@ -115,13 +137,9 @@ function Shop() {
                         >
 
                             {product.discount && (
-
                                 <div className="discount">
-
                                     {product.discount}
-
                                 </div>
-
                             )}
 
                             <div className="image-box">
@@ -136,27 +154,19 @@ function Shop() {
                             <div className="content">
 
                                 <h3 className="product-name">
-
                                     {product.name}
-
                                 </h3>
 
                                 <div className="price">
 
                                     <span className="current">
-
                                         {product.price}
-
                                     </span>
 
                                     {product.oldPrice && (
-
                                         <span className="old">
-
                                             {product.oldPrice}
-
                                         </span>
-
                                     )}
 
                                 </div>
@@ -166,15 +176,11 @@ function Shop() {
                                     {Array.from({ length: 5 }, (_, index) => {
 
                                         if (product.rating >= index + 1) {
-
                                             return <FaStar key={index} />;
-
                                         }
 
                                         if (product.rating >= index + 0.5) {
-
                                             return <FaStarHalfAlt key={index} />;
-
                                         }
 
                                         return <FaRegStar key={index} />;
@@ -183,10 +189,11 @@ function Shop() {
 
                                 </div>
 
-                                <button className="cart-btn">
-
+                                <button
+                                    className="cart-btn"
+                                    onClick={handleAddToCart}
+                                >
                                     Add to Cart
-
                                 </button>
 
                             </div>

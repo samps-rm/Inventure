@@ -10,7 +10,7 @@ import {
     FaUser,
     FaShoppingCart
 } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 function Navbar() {
 
     const [showShop, setShowShop] = useState(false);
@@ -52,14 +52,12 @@ function Navbar() {
 
         <nav className="navbar">
 
-            <div className="navbar-logo">
-
+            <Link to="/" className="navbar-logo">
                 <img
                     src={logo}
                     alt="Inventure Logo"
                 />
-
-            </div>
+            </Link>
 
             <ul className="navbar-links">
 
@@ -86,9 +84,9 @@ function Navbar() {
 
                 <li>
 
-                    <a href="#">
-                        Offers
-                    </a>
+                    <Link to="/offers">
+                         Offers
+                     </Link>
 
                 </li>
 
